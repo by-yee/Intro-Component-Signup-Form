@@ -1,0 +1,168 @@
+@import 'variables';
+
+body {
+    font-family: $font_family;
+    font-size: $body_font;
+    background-image: url("../images/bg-intro-desktop.png");
+    background-color: $red;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+.content {
+    width: 50%;
+    color: $white;
+    padding: 50px 30px 50px 50px;
+
+    h1 {
+        font-size: 48px;
+        line-height: 1.1em;
+    }
+}
+
+.card {
+    width: 50%;
+    padding: 50px 70px 50px 50px;
+
+    &__label {
+        background-color: $blue;
+        color: $white;
+        padding: 20px 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0px 8px $dark_blue_shadow;
+    }
+
+    &__form {
+        background-color: $white;
+        padding: 15px 35px 35px 35px;
+        border-radius: 10px;
+        box-shadow: 0px 8px $dark_blue_shadow;
+
+        .input {
+            width: 100%;
+            margin-top: 20px;
+            padding: 15px 35px;
+            font-family: $font_family;
+            font-size: $input_font;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        &--input {
+            font-weight: bold;
+            letter-spacing: 0.012em;
+            color: $dark_blue;
+            box-sizing: border-box;
+            border: 1px solid $grayish_blue;
+
+            &:focus {
+                border: 1px solid #000;
+                border-radius: 5px;
+            }
+        }
+
+        &--validation {
+            color: $red;
+            border: 1px solid $red;
+        }
+
+        .is-invalid {
+            margin: 0px -20px -20px 0px;
+            padding-top: 5px;
+            float: right;
+            color: $red;
+            font-size: 10px;
+            font-weight: 500;
+            font-style: italic;
+            display: none;
+
+            &::before {
+                content: url('../images/icon-error.svg');
+                float: right;
+                position: relative;
+                top: -45px;
+                right: 35px;
+            }
+        }
+
+        &--button {
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: $white;
+            background-color: $green;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 8px $green_shadow;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &:active {
+                position: relative;
+                top: 4px;
+                box-shadow: 0px 4px $green_shadow;
+            }
+        }
+
+        p {
+            padding-top: 10px;
+            text-align: center;
+            font-size: 11px;
+            color: $grayish_blue;
+
+            span {
+                color: $red;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+
+    a {
+        color: $white;
+    }
+}
+
+@media (max-width: 1040px) {
+    .container {
+        flex-direction: column;
+        padding: 0px;
+    }
+   
+    .content {
+        width: 90%;
+        padding: 40px 0px;
+        text-align: center;
+
+        h1 {
+            font-size: 28px;
+            line-height: 1.3em;
+        }
+    }
+
+    .card {
+        width: 90%;
+        padding: 0px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url("../images/bg-intro-mobile.png");
+    }
+}
