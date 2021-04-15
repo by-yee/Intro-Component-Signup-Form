@@ -15,8 +15,10 @@ document.getElementById("submit").addEventListener("click", function(event) {
 				form[0][i].nextElementSibling.style.display = "none";
 			}
 		}
+		
 		//Validate email address format
-		if(form[0][2].value !== "" && !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(form[0][2].value)) {
+		const valid_email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		if(form[0][2].value !== "" && !valid_email.test(form[0][2].value)) {
 			form[0][2].classList.add("card__form--validation");
 			document.getElementsByClassName("is-invalid")[2].innerHTML = 'Looks like this is not an email';
 			form[0][2].nextElementSibling.style.display = "block";
