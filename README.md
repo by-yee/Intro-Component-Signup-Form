@@ -48,7 +48,7 @@ Users should be able to:
 
 ### Continued development
 
-Other than my current Javascript solution, I think there are more ways to make it better for checking the form validation. There is one part that I may take a look into it in the future is once user enter the correct value in the input, it immediately remove the error message without clicking the submit button.
+Other than my current Javascript solution, I think there are more ways to make it better for checking the form validation. There is one part that I may take a look into it in the future is once user enter the correct value in the input, it will immediately remove the error message without clicking the submit button.
 
 ## Author
 
