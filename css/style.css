@@ -43,6 +43,9 @@ body {
   border-radius: 10px;
   box-shadow: 0px 8px rgba(62, 60, 73, 0.3);
 }
+.card__form label {
+  display: none;
+}
 .card__form .input {
   width: 100%;
   margin-top: 20px;
